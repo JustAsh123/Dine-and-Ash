@@ -1,0 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Source Code Pro";
+    background-color: rgb(147, 175, 104);
+    min-width: 522px;
+}
