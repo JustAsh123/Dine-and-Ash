@@ -2,7 +2,7 @@ import React from 'react'
 import './Filter.css'
 
 const Filter = ({setFilter}) => {
-    const options = ["all","coffee","cold drinks","deserts","juices","milkshakes","snacks"]
+    const options = ["all","coffee","deserts","beverages","milkshakes","snacks"]
   return (
     <form>
       <label>Filter:</label>

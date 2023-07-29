@@ -3,11 +3,13 @@ import './All.css'
 import { useState, useEffect } from "react"
 import ProductBox from "./Components/ProductBox";
 import Filter from "./Components/Filter";
+import Sort from "./Components/Sort";
 
 function App() {
 
   const [products,setProducts] = useState([]);
   const [filter,setFilter] = useState("all");
+  const [sort,setSort] = useState("Featured");
 
   useEffect(() => {
     fetch("http://localhost/Dine%20and%20Ash/api/fetch_menu.php")
@@ -20,7 +22,8 @@ function App() {
     <div>
       <Navbar />
       <Filter setFilter={setFilter}/>
-      <ProductBox products = {products} filter={filter}/>
+      <Sort setSort={setSort}/>
+      <ProductBox products = {products} filter={filter} sort={sort}/>
     </div>
   )
 }
