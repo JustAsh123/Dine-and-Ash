@@ -3,7 +3,7 @@ import './ProductCard.css'
 
 const ProductCard = ({product,filter}) => {
   
-  const [imageSrc, setImageSrc] = useState(null);
+  /* const [imageSrc, setImageSrc] = useState(null);
   useEffect(() => {
     // Dynamically import the image based on product.image_link
     const imagePath = `./images/${product.category}/${product.image_link}`;
@@ -12,13 +12,13 @@ const ProductCard = ({product,filter}) => {
     import(imagePath)
       .then((image) => setImageSrc(image.default))
       .catch((error) => console.error('Error loading image:', error));
-  }, []);
+  }, []); */
   
   
     if (filter=="all"){
       return(
         <div className='product-card'>
-        <img src={imageSrc}></img>
+        <img src={product.image_link}></img>
         <div className='details'>
         <p className='title'>{product.title}</p>
         <p className='rating'><i className="fa-solid fa-star star"></i>{product.rating}</p>
