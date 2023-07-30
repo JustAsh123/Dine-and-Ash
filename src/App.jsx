@@ -12,7 +12,7 @@ function App() {
   const [sort,setSort] = useState("Featured");
 
   useEffect(() => {
-    fetch("https://fetchdataphp.infinityfreeapp.com/?i=1")
+    fetch("https://fetchdataphp.infinityfreeapp.com/fetch_menu.php")
     .then((response)=>response.json())
     .then((data)=>setProducts(data))
     .catch((error)=>console.error("Error fetching data"))
