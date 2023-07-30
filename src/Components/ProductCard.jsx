@@ -30,7 +30,7 @@ const ProductCard = ({product,filter}) => {
     }else if(product.category==filter){
       return(
         <div className='product-card'>
-        <img src={imageSrc}></img>
+        <img src={product.image_link}></img>
         <div className='details'>
         <p className='title'>{product.title}</p>
         <p className='rating'><i className="fa-solid fa-star star"></i>{product.rating}</p>
