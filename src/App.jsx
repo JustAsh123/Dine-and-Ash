@@ -12,7 +12,7 @@ function App() {
   const [sort,setSort] = useState("Featured");
 
   useEffect(() => {
-    fetch("http://localhost/Dine%20and%20Ash/api/fetch_menu.php")
+    fetch("http://fetchphpdineash.byethost11.com/?")
     .then((response)=>response.json())
     .then((data)=>setProducts(data))
     .catch((error)=>console.error("Error fetching data"))

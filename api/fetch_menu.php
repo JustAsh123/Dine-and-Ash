@@ -1,9 +1,9 @@
 <?php
 header("Access-Control-Allow-Origin: *");
-$host = "localhost";
-$username = "root";
-$password = "";
-$database = "cafe";
+$host = "db4free.net";
+$username = "ashmit";
+$password = "ASmit123";
+$database = "dine_and_ash";
 
 $conn = new mysqli($host,$username,$password,$database);
 
