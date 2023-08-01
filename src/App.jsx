@@ -4,6 +4,10 @@ import { useState, useEffect } from "react"
 import ProductBox from "./Components/ProductBox";
 import Filter from "./Components/Filter";
 import Sort from "./Components/Sort";
+import Register from './Components/Register'
+import Login from "./Components/Login";
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
 
@@ -19,12 +23,22 @@ function App() {
   },[])
   
   return (
-    <div>
+    <BrowserRouter>
       <Navbar />
-      <Filter setFilter={setFilter}/>
-      <Sort setSort={setSort}/>
-      <ProductBox products = {products} filter={filter} sort={sort}/>
-    </div>
+      <Routes>
+        <Route path="/" element={<div>
+          <Filter setFilter={setFilter}/>
+          <Sort setSort={setSort}/>
+          <ProductBox products = {products} filter={filter} sort={sort}/>
+          </div>}></Route>
+        <Route path="/register" element={
+          <div>
+            <Register />
+          </div>
+        }/>
+        <Route path="/login" element={<Login/>}/>
+      </Routes>
+    </BrowserRouter>
   )
 }
 
